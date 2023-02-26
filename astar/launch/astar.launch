@@ -1,0 +1,17 @@
+<launch>
+
+<arg name="start_x" default="0.05"/>
+<arg name="start_y" default="0.05"/>
+<arg name="start_z" default="0.1"/>
+
+  <node pkg="astar" type="astar" name="astar" output="screen" required = "true">
+
+      <param name="planning/start_x"      value="$(arg start_x)"/>
+      <param name="planning/start_y"      value="$(arg start_y)"/>
+
+      <param name="inflate_num"           value="3"/>
+
+      <param name="frame_id"   value="map"/>
+  </node>
+
+</launch>
